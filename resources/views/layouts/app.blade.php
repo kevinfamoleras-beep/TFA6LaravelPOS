@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Laravel POS') | TFA5</title>
+    <title>@yield('title', 'Laravel POS') | TFA6</title>
     <style>
         :root { color-scheme: dark; }
         * { box-sizing: border-box; }
@@ -26,6 +26,7 @@
         th,td { text-align:left; padding:14px; border-bottom:1px solid #243550; }
         th { background:#172940; color:#67e8f9; }
         tr:last-child td { border-bottom:none; }
+        .record-count { margin-bottom: 0; color:#94a3b8; font-size:.9rem; }
         footer { max-width:1060px; margin:65px auto 20px; padding:0 20px; color:#94a3b8; font-size:.9rem; }
     </style>
 </head>
@@ -44,6 +45,6 @@
 <main>
     @yield('content')
 </main>
-<footer>IT0049 - Web System Technologies | TFA5 Laravel POS Foundations</footer>
+<footer>IT0049 - Web System Technologies | TFA6 — From Arrays to Eloquent</footer>
 </body>
 </html>

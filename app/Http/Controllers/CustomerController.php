@@ -2,18 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Customer;
+use Illuminate\View\View;
+
 class CustomerController extends Controller
 {
-    public function index()
+    public function index(): View
     {
-        // Temporary static data source for TFA5: no database required.
-        $customers = [
-            ['full_name' => 'Hatsune Miku', 'email' => 'miku@example.com', 'phone' => '09170000001'],
-            ['full_name' => 'Kasane Teto', 'email' => 'teto@example.com', 'phone' => '09170000002'],
-            ['full_name' => 'Akita Neru', 'email' => 'neru@example.com', 'phone' => '09170000003'],
-            ['full_name' => 'Zundamon', 'email' => 'zunda@example.com', 'phone' => '09170000004'],
-            ['full_name' => 'Yowane Haku', 'email' => 'haku@example.com', 'phone' => '09170000005'],
-        ];
+        $customers = Customer::query()
+            ->orderBy('full_name')
+            ->get();
 
         return view('customers', compact('customers'));
     }

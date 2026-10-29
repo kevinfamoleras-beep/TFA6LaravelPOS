@@ -1,0 +1,18 @@
+TFA6 OVERLAY PACK
+
+Merge these files into your existing TFA5 Laravel project.
+This ZIP is not a full Laravel installation and does not contain vendor/.
+
+IMPORTANT:
+- It replaces the default Laravel users migration and the TFA5 customer migration.
+- Use a NEW/EMPTY TFA6 database.
+- `php artisan migrate:fresh --seed` DROPS ALL TABLES in the database configured in .env.
+- Do not run it against a database containing anything you need to keep.
+
+Then run:
+  php artisan optimize:clear
+  php artisan migrate:fresh --seed
+  php artisan route:list
+  php artisan serve
+
+Pages: /, /about, /customers, /users
